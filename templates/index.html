@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>OCRPi</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <h1>OCR on RPi Demo</h1>
+    <div class="container">
+      <div class="left">
+        <div class="video-container">
+            <img id="video-stream" src="/video_feed" alt="Video Stream">
+            <img id="static-image" style="display:none;" alt="Static Image">
+        </div>
+        <div class="button-container">
+          <button id="capture-btn" class="button">Capture</button>
+          <button id="open-btn" class="button">Open...</button>
+          <button id="ok-btn" class="button" style="display:none;">Analyse</button>
+          <button id="cancel-btn" class="button" style="display:none;">Back</button>
+          <input type="file" id="file-input" style="display:none;" accept="image/*">
+        </div>
+      </div>
+      <div class="right">
+        <div id="result">
+          <div>Capture a photo or open a local picture.</div>
+        </div>
+      </div>
+    </div>
+    <canvas id="capture-canvas" style="display:none;"></canvas>
+    <script src="/static/script.js"></script>
+  </body>
+</html>
